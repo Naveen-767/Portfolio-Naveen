@@ -624,7 +624,7 @@ img {
 }
 
 .toggle {
-  background-color:transparent;
+  background-color: transparent;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -660,8 +660,9 @@ img {
   transition-delay: 200ms;
   transform: scale(1) rotate(360deg);
 }
+
 /* header */
-.dark-mode  .l-header {
+.dark-mode .l-header {
   width: 100%;
   position: fixed;
   top: 0;
@@ -670,6 +671,23 @@ img {
   background-color: #040404;
   box-shadow: 0 1px 4px rgba(168, 175, 183, 0.15);
 }
-.dark-mode .nav__link , .dark-mode .nav__logo {
+
+.dark-mode .nav__link,
+.dark-mode .nav__logo {
   color: #fff;
+}
+
+.dark-mode .home__social-icon {
+  color: white;
+}
+
+.dark-mode .contact__input {
+  background: #000;
+  color: whitesmoke;
+}
+
+.dark-mode .footer {
+  background: #000;
+  border-top: 1px solid gray;
+  box-shadow: 0 -5px 5px -5px #edebeb;
 }
