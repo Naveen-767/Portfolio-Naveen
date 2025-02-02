@@ -1,366 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- =====BOX ICONS===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-        <!-- =====BOX ICONS===== -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
-            rel="stylesheet">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
-            rel='stylesheet'>
+    <title>Portfolio Naveen G</title>
+  </head>
 
-        <title>Portfolio Naveen G</title>
-    </head>
+  <body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+      <nav class="nav bd-grid">
+        <div>
+          <a href="#" class="nav__logo">Naveen G</a>
+        </div>
+        <div>
+          <div class="dark">
+            <label class="toggle" for="switch">
+              <input
+                id="switch"
+                onclick="darkmode()"
+                class="input"
+                type="checkbox"
+              />
+              <div class="icon icon--moon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1)"
+                >
+                  <path
+                    d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="icon icon--sun">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(255, 255, 255, 1); transform: msFilter"
+                >
+                  <path
+                    d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+          </div>
+        </div>
 
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid ">
-                <div>
-                    <a href="#" class="nav__logo">Naveen G</a>
-                </div>
-                <div>
-                    <div class="dark">
-                        <label class="toggle" for="switch">
-                            <input id="switch" onclick="darkmode()"
-                                class="input"
-                                type="checkbox">
-                            <div class="icon icon--moon">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="20" height="20" viewBox="0 0 24 24"
-                                    style="fill: rgba(0, 0, 0, 1);"><path
-                                        d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z"></path></svg>
-                            </div>
-                            <div class="icon icon--sun">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"></path></svg>
-                            </div>
-                        </label>
-                    </div>
-                </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a href="#work" class="nav__link">Work</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home"
-                                class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about"
-                                class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills"
-                                class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work"
-                                class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact"
-                                class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+    <main class="l-main">
+      <!--===== HOME =====-->
+      <section class="home bd-grid" id="home">
+        <div class="home__data">
+          <h1 class="home__title">
+            Hi,<br />I'am <span class="home__title-color">Naveen G</span><br />
+          </h1>
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span
-                            class="home__title-color">Naveen G</span><br></h1>
+          <h2 class="home__title des">Front-End Web Devloper</h2>
+          <a href="#contact" class="button">Contact</a>
+        </div>
 
-                    <h2 class="home__title des">Front-End Web Devloper</h2>
-                    <a href="#contact" class="button">Contact</a>
-                </div>
+        <div class="home__social">
+          <a
+            href="https://www.linkedin.com/in/naveen-raj-910a14218/"
+            target="_blank"
+            class="home__social-icon"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/naveenraj767/"
+            target="_blank"
+            class="home__social-icon insta"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a
+            href="https://github.com/naveen-767"
+            target="_blank"
+            class="home__social-icon git"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100009760741593"
+            target="_blank"
+            class="home__social-icon"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+          <a
+            href="https://wa.me/8072908442"
+            target="_blank"
+            class="home__social-icon"
+            ><i class="bx bxl-whatsapp"></i
+          ></a>
+        </div>
 
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/naveen-raj-910a14218/"
-                        target="_blank" class="home__social-icon"><i
-                            class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.instagram.com/naveenraj767/"
-                        target="_blank" class="home__social-icon insta"><i
-                            class='bx bxl-instagram'></i></a>
-                    <a href="https://github.com/naveen-767" target="_blank"
-                        class="home__social-icon git"><i
-                            class='bx bxl-github'></i></a>
-                    <a
-                        href="https://www.facebook.com/profile.php?id=100009760741593"
-                        target="_blank"
-                        class="home__social-icon"><i
-                            class='bx bxl-facebook'></i></a>
-                    <a href="https://wa.me/8072908442" target="_blank"
-                        class="home__social-icon"><i
-                            class='bx bxl-whatsapp'></i></a>
-                </div>
+        <div class="home__img">
+          <img
+            src="./assets/img/1.copy.png"
+            alt
+          />
+        </div>
+      </section>
 
-                <div class="home__img">
-                    <img
-                        src="./wallpapersden.com_black-panther-4k-dark_5120x2880.jpg"
-                        alt>
-                </div>
-            </section>
+      <!--===== ABOUT =====-->
+      <section class="about section" id="about">
+        <h2 class="section-title">About</h2>
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+        <div class="about__container bd-grid">
+          <div class="about__img">
+            <img src="./assets/img/2.png" alt />
+          </div>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="./assets/img/about.jpg" alt>
-                    </div>
+          <div>
+            <h2 class="about__subtitle">I'am Naveen</h2>
+            <p class="about__text">
+              Welcome to my portfolio!<br />
+              A passionate front-end developer dedicated to crafting beautiful
+              and user-friendly web experiences. With a strong foundation in
+              HTML, CSS, and JavaScript, I transform ideas into dynamic websites
+              that engage and inspire.
+            </p>
+            <br />
+            <p>
+              I believe that great web development combines aesthetics with
+              functionality. Every project is an opportunity to innovate, solve
+              problems, and create seamless user journeys. I’m committed to
+              staying updated with the latest trends and technologies to deliver
+              top-notch results.
+            </p>
+            <br />
 
-                    <div>
-                        <h2 class="about__subtitle">I'am Naveen</h2>
-                        <p class="about__text">Welcome to my portfolio!<br> A
-                            passionate front-end developer dedicated to crafting
-                            beautiful and user-friendly web experiences. With a
-                            strong foundation in HTML, CSS, and JavaScript, I
-                            transform ideas into dynamic websites that engage
-                            and inspire.</p><br>
-                        <p>I believe that great web development combines
-                            aesthetics with functionality. Every project is an
-                            opportunity to innovate, solve problems, and create
-                            seamless user journeys. I’m committed to staying
-                            updated with the latest trends and technologies to
-                            deliver top-notch results.</p><br>
+            <p>
+              Let's Connect! I’m always excited to collaborate on new projects.
+              Feel free to reach out if you’d like to discuss how we can work
+              together!
+            </p>
+          </div>
+        </div>
+      </section>
 
-                        <p>Let's Connect!
-                            I’m always excited to collaborate on new projects.
-                            Feel free to reach out if you’d like to discuss how
-                            we can work together!</p>
-                    </div>
-                </div>
-            </section>
+      <!--===== SKILLS =====-->
+      <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid ">
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <!-- 1 -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i
-                                    class='bx bxl-html5 bx-tada skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html"></div>
-                            <div><span
-                                    class="skills__percentage">98%</span></div>
-                        </div>
-                        <!-- 2 -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i
-                                    class='bx bxl-javascript bx-tada skills__icon'></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js"></div>
-                            <div><span
-                                    class="skills__percentage">90%</span></div>
-                        </div>
-
-                        <!-- 3 -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i
-                                    class='bx bxl-github bx-tada skills__icon'></i>
-                                <span class="skills__name">GIT & GITHUB</span>
-                            </div>
-                            <div class="skills__bar skills__git"></div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div>
-                        </div>
-                        <!-- 4 -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i
-                                    class='bx bxs-paint bx-tada skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux"></div>
-                            <div>
-                                <span class="skills__percentage">100%</span>
-                            </div>
-                        </div>
-                        <!-- 5 -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i
-                                    class='bx bxl-figma bx-spin skills__icon'></i>
-                                <span class="skills__name">FIGMA & PIXSO</span>
-                            </div>
-                            <div class="skills__bar skills__figma"></div>
-                            <div>
-                                <span class="skills__percentage">80%</span>
-                            </div>
-                        </div>
-
-                        <!-- 6 -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-data bx-tada skills__icon'></i>
-                                <span class="skills__name">MYSQL</span>
-                            </div>
-                            <div class="skills__bar skills__sql"></div>
-                            <div>
-                                <span class="skills__percentage">50%</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- 7 -->
-                    <div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 bx-tada skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css"></div>
-                            <div><span
-                                    class="skills__percentage">95%</span></div>
-                        </div>
-
-                        <!-- 8 -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i
-                                    class='bx bxl-sass bx-burst skills__icon'></i>
-                                <span class="skills__name">SASS</span>
-                            </div>
-                            <div class="skills__bar skills__sass"></div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-
-                        <!-- 9 -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i
-                                    class='bx bxl-react bx-spin skills__icon'></i>
-                                <span class="skills__name">REACT.JS</span>
-                            </div>
-                            <div class="skills__bar skills__react"></div>
-                            <div>
-                                <span class="skills__percentage">80%</span>
-                            </div>
-                        </div>
-
-                        <!-- 10 -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i
-                                    class='bx bxl-bootstrap bx-tada skills__icon'></i>
-                                <span class="skills__name">BOOTSTRAP</span>
-                            </div>
-                            <div class="skills__bar skills__boot"></div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div>
-                        </div>
-
-                        <!-- 11 -->
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i
-                                    class='bx bxl-tailwind-css bx-tada skills__icon'></i>
-                                <span class="skills__name">Tailwind</span>
-                            </div>
-                            <div class="skills__bar skills__tailwind"></div>
-                            <div>
-                                <span class="skills__percentage">80%</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
-
-                <div class="work__container bd-grid">
-                    <a href target="_blank" class="work__img">
-                        <img src="assets/img/work1.jpg" alt>
-                    </a>
-                    <a href target="_blank" class="work__img">
-                        <img src="assets/img/work2.jpg" alt>
-                    </a>
-                    <a href target="_blank" class="work__img">
-                        <img src="assets/img/work3.jpg" alt>
-                    </a>
-                    <a href target="_blank" class="work__img">
-                        <img src="assets/img/work4.jpg" alt>
-                    </a>
-                    <a href target="_blank" class="work__img">
-                        <img src="assets/img/work5.jpg" alt>
-                    </a>
-                    <a href target="_blank" class="work__img">
-                        <img src="assets/img/work6.jpg" alt>
-                    </a>
-                </div>
-
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action method name class="contact__form">
-                        <input type="text" placeholder="Name" name="name"
-                            class="contact__input">
-                        <input type="mail" placeholder="Email" name="email"
-                            class="contact__input">
-                        <textarea name id cols="0" rows="10"
-                            class="contact__input"></textarea>
-                        <input type="button" value="Send"
-                            class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-
-            <p class="footer__title">Naveen G</p>
-            <div class="footer__social">
-
-                <a href="https://www.linkedin.com/in/naveen-raj-910a14218/"
-                    target="_blank" class="footer__icon"><i
-                        class='bx bxl-linkedin'></i></a>
-                <a href="https://www.instagram.com/naveenraj767/"
-                    target="_blank" class="footer__icon insta"><i
-                        class='bx bxl-instagram'></i></a>
-                <a href="https://github.com/naveen-767" target="_blank"
-                    class="footer__icon git"><i
-                        class='bx bxl-github'></i></a>
-                <a
-                    href="https://www.facebook.com/profile.php?id=100009760741593"
-                    target="_blank" class="footer__icon"><i
-                        class='bx bxl-facebook'></i></a>
-                <a href="https://wa.me/8072908442" target="_blank"
-                    class="footer__icon"><i class='bx bxl-whatsapp'></i></a>
+        <div class="skills__container bd-grid">
+          <div>
+            <h2 class="skills__subtitle">Profesional Skills</h2>
+            <!-- 1 -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-html5 bx-tada skills__icon"></i>
+                <span class="skills__name">HTML5</span>
+              </div>
+              <div class="skills__bar skills__html"></div>
+              <div><span class="skills__percentage">98%</span></div>
             </div>
-            <p class="footer__copy">&#169; All rigths reserved</p>
-        </footer>
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+            <!-- 2 -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-javascript bx-tada skills__icon"></i>
+                <span class="skills__name">JAVASCRIPT</span>
+              </div>
+              <div class="skills__bar skills__js"></div>
+              <div><span class="skills__percentage">90%</span></div>
+            </div>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-        <!--===== EMAIL JS =====-->
-        <!-- <script src="./assets/js/email.js"></script> -->
-        <!-- <script src="./assets/php/main.php"></script> -->
+            <!-- 3 -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-github bx-tada skills__icon"></i>
+                <span class="skills__name">GIT & GITHUB</span>
+              </div>
+              <div class="skills__bar skills__git"></div>
+              <div>
+                <span class="skills__percentage">90%</span>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxs-paint bx-tada skills__icon"></i>
+                <span class="skills__name">UX/UI</span>
+              </div>
+              <div class="skills__bar skills__ux"></div>
+              <div>
+                <span class="skills__percentage">100%</span>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-figma bx-spin skills__icon"></i>
+                <span class="skills__name">FIGMA & PIXSO</span>
+              </div>
+              <div class="skills__bar skills__figma"></div>
+              <div>
+                <span class="skills__percentage">80%</span>
+              </div>
+            </div>
 
-    </body>
+            <!-- 6 -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxs-data bx-tada skills__icon"></i>
+                <span class="skills__name">MYSQL</span>
+              </div>
+              <div class="skills__bar skills__sql"></div>
+              <div>
+                <span class="skills__percentage">50%</span>
+              </div>
+            </div>
+          </div>
+          <!-- 7 -->
+          <div>
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-css3 bx-tada skills__icon"></i>
+                <span class="skills__name">CSS3</span>
+              </div>
+              <div class="skills__bar skills__css"></div>
+              <div><span class="skills__percentage">95%</span></div>
+            </div>
 
+            <!-- 8 -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-sass bx-burst skills__icon"></i>
+                <span class="skills__name">SASS</span>
+              </div>
+              <div class="skills__bar skills__sass"></div>
+              <div>
+                <span class="skills__percentage">95%</span>
+              </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-react bx-spin skills__icon"></i>
+                <span class="skills__name">REACT.JS</span>
+              </div>
+              <div class="skills__bar skills__react"></div>
+              <div>
+                <span class="skills__percentage">80%</span>
+              </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-bootstrap bx-tada skills__icon"></i>
+                <span class="skills__name">BOOTSTRAP</span>
+              </div>
+              <div class="skills__bar skills__boot"></div>
+              <div>
+                <span class="skills__percentage">90%</span>
+              </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-tailwind-css bx-tada skills__icon"></i>
+                <span class="skills__name">Tailwind</span>
+              </div>
+              <div class="skills__bar skills__tailwind"></div>
+              <div>
+                <span class="skills__percentage">80%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--===== WORK =====-->
+      <section class="work section" id="work">
+        <h2 class="section-title">Work</h2>
+
+        <div class="work__container bd-grid">
+          <a href target="_blank" class="work__img">
+            <img src="assets/img/work1.jpg" alt />
+          </a>
+          <a href target="_blank" class="work__img">
+            <img src="assets/img/work2.jpg" alt />
+          </a>
+          <a href target="_blank" class="work__img">
+            <img src="assets/img/work3.jpg" alt />
+          </a>
+          <a href target="_blank" class="work__img">
+            <img src="assets/img/work4.jpg" alt />
+          </a>
+          <a href target="_blank" class="work__img">
+            <img src="assets/img/work5.jpg" alt />
+          </a>
+          <a href target="_blank" class="work__img">
+            <img src="assets/img/work6.jpg" alt />
+          </a>
+        </div>
+      </section>
+
+      <!--===== CONTACT =====-->
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact__container bd-grid">
+          <form action method name class="contact__form">
+            <input
+              type="text"
+              placeholder="Name"
+              name="name"
+              class="contact__input"
+            />
+            <input
+              type="mail"
+              placeholder="Email"
+              name="email"
+              class="contact__input"
+            />
+            <textarea
+              name
+              id
+              cols="0"
+              rows="10"
+              class="contact__input"
+            ></textarea>
+            <input type="button" value="Send" class="contact__button button" />
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+      <p class="footer__title">Naveen G</p>
+      <div class="footer__social">
+        <a
+          href="https://www.linkedin.com/in/naveen-raj-910a14218/"
+          target="_blank"
+          class="footer__icon"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/naveenraj767/"
+          target="_blank"
+          class="footer__icon insta"
+          ><i class="bx bxl-instagram"></i
+        ></a>
+        <a
+          href="https://github.com/naveen-767"
+          target="_blank"
+          class="footer__icon git"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100009760741593"
+          target="_blank"
+          class="footer__icon"
+          ><i class="bx bxl-facebook"></i
+        ></a>
+        <a href="https://wa.me/8072908442" target="_blank" class="footer__icon"
+          ><i class="bx bxl-whatsapp"></i
+        ></a>
+      </div>
+      <p class="footer__copy">&#169; All rigths reserved</p>
+    </footer>
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+    <!--===== EMAIL JS =====-->
+    <!-- <script src="./assets/js/email.js"></script> -->
+    <!-- <script src="./assets/php/main.php"></script> -->
+  </body>
 </html>

@@ -240,6 +240,7 @@ img {
 }
 
 .home__img {
+  padding-top: 1rem;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -668,7 +669,8 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #040404;
+  color: #fff;
+  background-color: #000000;
   box-shadow: 0 1px 4px rgba(168, 175, 183, 0.15);
 }
 
